@@ -1,6 +1,5 @@
 {
   "development": {
-    "username": "root",
     "password": null,
     "database": "jobTrackerdb",
     "host": "127.0.0.1",
