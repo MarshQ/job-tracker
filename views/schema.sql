@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS jobTrackerdb; 
+CREATE DATABASE jobTrackerdb;
