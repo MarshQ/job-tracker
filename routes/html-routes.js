@@ -6,9 +6,9 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     if (req.user) {
-      res.redirect("/home");
+      return res.redirect("/home");
     }
-    res.render(`signup`);
+    res.render(`login`);
   });
 
   app.get("/main", function(req, res) {
@@ -18,8 +18,12 @@ module.exports = function(app) {
     res.render(`home`);
   });
 
-  app.get("/home", isAuthenticated, function(req, res) {
+  app.get("/home", function(req, res) {
     res.render('home');
+  });
+
+  app.get("/new", function(req, res) {
+    res.render('new');
   });
 
 }
