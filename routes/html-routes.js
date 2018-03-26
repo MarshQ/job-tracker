@@ -8,22 +8,34 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect("/home");
     }
+    res.render(`home`);
+  });
+
+
+  // If user login is successful then go to home, if unsuccessful go to login
+  app.get("/login", function(req, res) {
+    if (req.user) {
+      res.redirect("/home");
+    }
     res.render(`login`);
   });
 
-  app.get("/main", function(req, res) {
+  app.get("/signup", function(req, res) {
     if (req.user) {
-      res.redirect("/main");
+      res.redirect("/home");
     }
-    res.render(`home`);
+    res.render(`signup`);
   });
+
 
   app.get("/home", function(req, res) {
     res.render('home');
   });
 
-  app.get("/new", function(req, res) {
-    res.render('new');
-  });
+
+
+//   app.get("/new", function(req, res) {
+//     res.render('new');
+//   });
 
 }
