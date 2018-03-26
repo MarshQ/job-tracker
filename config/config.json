@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "Mychildren1234",
-    "database": "jobTrackerdb",
-    "host": "127.0.0.1",
+    "password": "",
+    "database": "jobTrackerDB",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
