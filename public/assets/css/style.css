@@ -5,3 +5,12 @@
 label {
   margin-right: 10px;
 }
+
+.jumbotron
+{
+    background: url('public/asstes/css/images/backgroundimage-3.png') fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    text-decoration-color: white;
+}
