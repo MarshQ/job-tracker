@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-        var User = sequelize.define("User", {
+        var job = sequelize.define("Job", {
 
             email: {
                 type: DataTypes.STRING,
@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
                     isEmail: true
                 }
             },
-            Company: {
+            company: {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
@@ -54,10 +54,10 @@ module.exports = function (sequelize, DataTypes) {
                 default: false
             },
             technical_interview_questions: {
-                //text or string? 
+                type: DataTypes.TEXT, 
             },
             feedback: {
                 type: DataTypes.TEXT,
-            },
-         },
+            }  
      });
+    }

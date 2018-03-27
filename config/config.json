@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Mychildren1234",
+    "password": "",
     "database": "jobTrackerdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
