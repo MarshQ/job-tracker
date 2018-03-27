@@ -41,4 +41,75 @@ module.exports = function (app) {
         }
     });
 
+  app.post("/api/application", function(req,res) {
+    db.Jobs.create( 
+      req.body
+      //{
+      // email: req.body.email,
+      // company: req.body.company,
+      // job_title: req.body.job_title,
+      // tech_python: req.body.tech_python,
+      // tech_javascript: req.body.tech_javascript,
+      // tech_css: req.body.tech_css,
+      // location: req.body.location,
+      // cover_resume: req.body.cover_resume,
+      // interview_scheduled: req.body.interview_scheduled,
+      // interview_date: req.body.interview_date,
+      // thank_you_note: req.body.thank_you_note,
+      // technical_interview_questions: req.body.technical_interview_questions,
+      // feedback: req.body.feedback
+      //}
+    ).then(function() {
+      res.redirect(307, "/home")
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+    });
+  });
+
+  app.get("/api/application", function(req,res) {
+    db.Jobs.findAll({
+      where: {
+        email: req.user.email
+      }
+    })
+  })
+
+
+
+  app.delete("/api/application/:id", function(req,res) {
+    db.Jobs.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbjobs) {
+      res.json(dbjobs);
+    })
+  })
+
+  app.get("/api/application/:id", function(req,res) {
+      db.Jobs.findOne({
+        where: {
+          id: req.params.id
+        },
+        include: [db.User]
+      }).then(function(dbPost) {
+        res.json(dbjobs);
+      })
+    })
+
+  app.put("/api/application", function(req,res) {
+    db.Jobs.update(
+      req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+    }).then(function(dbjobs) {
+      res.json(dbjobs);
+    })
+  })
+
+  
+
 };
