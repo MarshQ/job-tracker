@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
 
-    var User = sequelize.define("User", {
+    var Job = sequelize.define("Job", {
 
         email: {
             type: DataTypes.STRING,
@@ -18,22 +18,22 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
         //These are the boolean columns that hold the different common tchnologies that are used. 
-        tech_react: {
-            type: DataTypes.BOOLEAN,
-            default: false
-        },
-        tech_python: {
-            type: DataTypes.BOOLEAN,
-            default: false
-        },
-        tech_javascript: {
-            type: DataTypes.BOOLEAN,
-            default: false
-        },
-        tech_css: {
-            type: DataTypes.BOOLEAN,
-            default: false
-        },
+        // tech_react: {
+        //     type: DataTypes.BOOLEAN,
+        //     default: false
+        // },
+        // tech_python: {
+        //     type: DataTypes.BOOLEAN,
+        //     default: false
+        // },
+        // tech_javascript: {
+        //     type: DataTypes.BOOLEAN,
+        //     default: false
+        // },
+        // tech_css: {
+        //     type: DataTypes.BOOLEAN,
+        //     default: false
+        // },
 
         location: {
             type: DataTypes.STRING,
@@ -54,13 +54,14 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             default: false
         },
-        technical_interview_questions: {
-            //text or string? 
-        },
+        // technical_interview_questions: {
+        //     //text or string? 
+        // },
         feedback: {
             type: DataTypes.TEXT,
         }
-    }};
+    });
+    return Job;
 };
 
 
