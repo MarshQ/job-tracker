@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-        var job = sequelize.define("Job", {
 
+        var Job = sequelize.define("Job", {
             email: {
                 type: DataTypes.STRING,
                 allowNull: false,
@@ -33,7 +33,6 @@ module.exports = function (sequelize, DataTypes) {
                 type: DataTypes.BOOLEAN,
                 default: false
             }, 
-
             location: {
                 type: DataTypes.STRING,
                 allowNull: false,
@@ -42,7 +41,7 @@ module.exports = function (sequelize, DataTypes) {
                 type: DataTypes.BOOLEAN,
                 default: false,
             },
-            interview_scheduled :{
+            interview_scheduled: {
                 type: DataTypes.BOOLEAN,
                 default: false
             }, 
@@ -53,11 +52,10 @@ module.exports = function (sequelize, DataTypes) {
                 type: DataTypes.BOOLEAN,
                 default: false
             },
-            technical_interview_questions: {
-                type: DataTypes.TEXT, 
-            },
             feedback: {
                 type: DataTypes.TEXT,
-            }  
-     });
-    }
+            },
+         });
+        return Job;
+     }
+
