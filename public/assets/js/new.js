@@ -2,20 +2,23 @@
 
 $(document).ready(function () {
   // Getting jQuery references to the Application Info
-  var bodyInput = $("#body");
+  var companyInput = $("#company");
   var titleInput = $("#title");
-  var cmsForm = $("#cms");
-  var authorSelect = $("#author");
+  var locationInput = $("#location");
+  var contactEmailInput = $("#contact");
+  var cmsForm = $(".newJob");
+  //this will be updated to usr
+  //var authorSelect = $("#author");
 
   // Adding an event listener for when the form is submitted
-  $(cmsForm).on("submit", handleFormSubmit);
-  // Gets the part of the url that comes after the "?" (which we have if we're updating a n application)
+  $("#addJob").on("submit", handleFormSubmit);
+  // Gets the part of the url that comes after the "?" (which we have if we're updating an application)
   var url = window.location.search;
-
   var jobId;
+  var userId;
   // Sets a flag for whether or not we're updating an app to be false initially
   var updating = false;
-
+  console.log(companyInput);
   // If we have this section in our url, we pull out the job  id from the url
   if (url.indexOf("?job_id=") !== -1) {
     jobId = url.split("=")[1];
@@ -25,8 +28,6 @@ $(document).ready(function () {
   else if (url.indexOf("?job_id=") !== -1) {
     jobId = url.split("=")[1];
   }
-  // Getting the Jobs
-  getJobs();
 
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -50,16 +51,16 @@ $(document).ready(function () {
         .val()
         .trim(),
       // this won't work - It used to be AuthorID:authorSelect.val()  - I don't have anything that's set up to match it yet 
-      UserId: userSelect.val()
+      // jobId: ID.val()
     };
 
     // If we're updating a post run updateJob to update a job
     // Otherwise run submitJob to create a whole new job
     if (updating) {
-      newJob.id = jobtId;
+      newJob.id = jobId;
       updateJob(newJob);
     } else {
-      submitPost(newPost);
+      submitJob(newJob);
     }
   }
 
@@ -78,6 +79,8 @@ $(document).ready(function () {
       case "job":
         queryUrl = "/api/jobs/" + id;
         break;
+      
+      //I don't have a link to the users anywhere else
       case "user":
         queryUrl = "/api/users/" + id;
         break;
@@ -100,10 +103,6 @@ $(document).ready(function () {
     });
   }
 
-  // A function to get Authors and then render our list of Authors
-  function getJobs() {
-    $.get("/api/jobs", renderJobsList);
-  }
   // Function to either render a list of jobs, or if there are none, direct the user to the page
   // to create a job first
   function renderJobsList(data) {

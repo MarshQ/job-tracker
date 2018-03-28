@@ -69,9 +69,7 @@ module.exports = function (app) {
 
   app.get("/api/jobs", function(req,res) {
     db.Jobs.findAll({
-      // where: {
-      //   email: req.user.email
-      // }
+
     })
   })
 
