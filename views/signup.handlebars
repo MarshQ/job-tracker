@@ -1,9 +1,7 @@
-
-
 <form class="signup">
   <p>Welcome to Job Tracker please sign in below</p>
 
-<div class="form-group">
+  <div class="form-group">
     <label for="exampleInputEmail1">First Name</label>
     <input type="text" class="form-control" id="firstName-input" placeholder="First Name">
   </div>
@@ -22,12 +20,14 @@
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="password-input" placeholder="Password">
   </div>
-  
+
   <div style="display: none" id="alert" class="alert alert-danger" role="alert">
     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     <span class="sr-only">Error:</span>
     <span class="msg"></span>
   </div>
-  
-  <button type="submit" class="btn btn-primary">Sign Up</button>
+
+  <button type="submit" class="btn btn-primary">
+    <a href="/home">Create Account</a>
+  </button>
 </form>
