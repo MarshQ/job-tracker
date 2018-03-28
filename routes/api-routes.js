@@ -42,22 +42,22 @@ module.exports = function (app) {
     });
 
   app.post("/api/jobs", function(req,res) {
-    db.Jobs.create(
+    db.Job.create(
       // req.body
       {
       email: req.body.email,
       company: req.body.company,
       job_title: req.body.title,
-      tech_python: req.body.tech_python,
-      tech_javascript: req.body.tech_javascript,
-      tech_css: req.body.tech_css,
+      // tech_python: req.body.tech_python,
+      // tech_javascript: req.body.tech_javascript,
+      // tech_css: req.body.tech_css,
       location: req.body.location,
-      cover_resume: req.body.cover_resume,
-      interview_scheduled: req.body.interview_scheduled,
-      interview_date: req.body.interview_date,
-      thank_you_note: req.body.thank_you_note,
-      technical_interview_questions: req.body.technical_interview_questions,
-      feedback: req.body.feedback
+      // cover_resume: req.body.cover_resume,
+      // interview_scheduled: req.body.interview_scheduled,
+      // interview_date: req.body.interview_date,
+      // thank_you_note: req.body.thank_you_note,
+      // technical_interview_questions: req.body.technical_interview_questions,
+      // feedback: req.body.feedback
       }
     ).then(function() {
       res.redirect(307, "/home")
