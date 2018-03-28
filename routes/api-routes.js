@@ -47,17 +47,17 @@ module.exports = function (app) {
       {
       email: req.body.email,
       company: req.body.company,
-      job_title: req.body.title,
-      // tech_python: req.body.tech_python,
-      // tech_javascript: req.body.tech_javascript,
-      // tech_css: req.body.tech_css,
+      job_title: req.body.job_title,
+      tech_python: req.body.tech_python,
+      tech_javascript: req.body.tech_javascript,
+      tech_css: req.body.tech_css,
       location: req.body.location,
-      // cover_resume: req.body.cover_resume,
-      // interview_scheduled: req.body.interview_scheduled,
-      // interview_date: req.body.interview_date,
-      // thank_you_note: req.body.thank_you_note,
-      // technical_interview_questions: req.body.technical_interview_questions,
-      // feedback: req.body.feedback
+      cover_resume: req.body.cover_resume,
+      interview_scheduled: req.body.interview_scheduled,
+      interview_date: req.body.interview_date,
+      thank_you_note: req.body.thank_you_note,
+      technical_interview_questions: req.body.technical_interview_questions,
+      feedback: req.body.feedback
       }
     ).then(function() {
       res.redirect(307, "/home")
@@ -68,15 +68,14 @@ module.exports = function (app) {
   });
 
   app.get("/api/jobs", function(req,res) {
-    db.Jobs.findAll({
-
+    db.Job.findAll({
     })
   })
 
 
 
   app.delete("/api/jobs/:id", function(req,res) {
-    db.Jobs.destroy({
+    db.Job.destroy({
       where: {
         id: req.params.id
       }
@@ -86,7 +85,7 @@ module.exports = function (app) {
   })
 
   app.get("/api/jobs/:id", function(req,res) {
-      db.Jobs.findOne({
+      db.Job.findOne({
         where: {
           id: req.params.id
         },
@@ -97,7 +96,7 @@ module.exports = function (app) {
     })
 
   app.put("/api/jobs", function(req,res) {
-    db.Jobs.update(
+    db.Job.update(
       req.body,
       {
         where: {
