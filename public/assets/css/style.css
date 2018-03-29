@@ -5,3 +5,247 @@
 label {
   margin-right: 10px;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+  background: rgba(242,246,248,1);
+background: -moz-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(180,197,207,0.64) 92%, rgba(225,240,249,0.61) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,246,248,1)), color-stop(92%, rgba(180,197,207,0.64)), color-stop(100%, rgba(225,240,249,0.61)));
+background: -webkit-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(180,197,207,0.64) 92%, rgba(225,240,249,0.61) 100%);
+background: -o-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(180,197,207,0.64) 92%, rgba(225,240,249,0.61) 100%);
+background: -ms-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(180,197,207,0.64) 92%, rgba(225,240,249,0.61) 100%);
+background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(180,197,207,0.64) 92%, rgba(225,240,249,0.61) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e1f0f9', GradientType=1 );
+}
+
+/* .form-group{
+
+  opacity: 100%;
+} */
+.index-social{
+    background-color:#2c2c2c;
+    color:#fff;
+}
+.link-area .fa-li{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:solid 1px #fff;
+    list-style-type:none;
+    margin:5px;
+    display:inline-block;
+}
+.index-social a{
+    color:#fff;
+    font-size:25px;
+    display:block;
+    float:left;
+    padding:10px;
+}
+.index-link h3{
+    text-align:center;
+   color:#f1f1f1;
+   text-align:left;
+
+}
+.index-link{
+    background-color:#000;
+}
+.index-link ul{
+    padding:0px;
+}
+.index-link ul li{
+    list-style-type:none;
+}
+.index-link ul li a{
+  text-decoration:none;
+  font-size:16px;
+  color:#fff;
+  display:block;
+  padding:5px 0;
+  text-align:left;
+}
+.index-link ul li a:hover{
+     text-decoration:underline;
+}
+.copy-c{
+    padding-top:15px;
+}
+
+.jumbotron {
+  margin-top: 20px;
+  background-image: url();
+  background-size: cover;
+  /* color: white;  */
+
+}
+/* .in-page {
+    min-height: 520px;
+}
+
+.main {
+    position: relative;
+}
+
+a {
+    color: #1b5a7c;
+}
+
+a:hover, a:focus {
+    color: #1b5a7c;
+}
+
+.btn-cyan {
+    background-color: #1b5a7c;
+    color: #fff;
+}
+
+.btn-cyan:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.form-control:focus {
+    border-color: #1b5a7c;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(24, 204, 162, 0.6);
+    outline: 0 none;
+}
+
+.min-height {
+    min-height: 380px;
+}
+*/
+ .background-image {
+    background-image: url(https://www.squiz.net/__public/Systems/Perspective/FileCache/1-32000/465/prop/header-bg-image.jpg?t=1472431690);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    opacity: 0.6;
+    /* position: fixed; */
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;  */
+    height: 60%;
+    width: 100%;
+}
+
+#signup-group{
+ font-weight: bold;
+ color: black;
+
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.jumbotron {
+  background-image: url("./images/logo-job-tracker-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  /* position: fixed; */
+  /* top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;  */
+  height: 20%;
+  width: 100%;
+  /* background: rgba(200, 54, 54, 0.0); */
+}
+
+.exampleInputEmail1{
+
+background: rgba(0, 0, 0, 0.4);
+font-weight: bold;
+
+}
+/* .login-screen:before {
+    content: "";
+    background: rgba(0,0,0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+    .signup {
+  align-items: flex-end;
+}
+
+.login {
+    width: 320px;
+    color: #fff;
+}
+
+.login .login-form {
+    text-align: left;
+}
+
+.login label {
+    color: #fff;
+}
+
+.login-form .input-group .form-control {
+    background: none;
+    height: 44px;
+    color: #ddd;
+}
+
+.login-form .input-group .input-group-addon {
+    background: none;
+}
+
+.login-form .input-group .input-group-addon .glyphicon {
+    color: #1b5a7c;
+}
+
+.login-form .input-group .form-control::-moz-placeholder {
+    color: #fff;
+    opacity: 0.3;
+}
+
+.login .sign-btn input.btn {
+    background: #1b5a7c;
+    border-color: #1b5a7c;
+    color: #fff;
+    width: 180px;
+}
+
+.login .sign-btn a {
+    text-decoration: none;
+}
+
+.login .checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login .forgot {
+    display: inline-block;
+    margin: 20px 0;
+}  */
