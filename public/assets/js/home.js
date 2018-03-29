@@ -7,8 +7,8 @@ $.get("/api/jobs", function(data) {
     wellSection.attr("id", "job-well-" + i);
     // Append the well to the well section
     $("#well-section").append(wellSection);
-
-    // Now  we add our book data to the well we just placed on the page
+    
+    // Now  we add our job data to the well we just placed on the page
     $("#job-well-" + i).append("<h2>  " + data[i].job_title + "</h2>");
     $("#job-well-" + i).append("<p>Company: " + data[i].company + "</p>");
     $("#job-well-" + i).append("<p> Location:  " + data[i].location+ "</p>");
@@ -17,9 +17,6 @@ $.get("/api/jobs", function(data) {
     console.log(wellSection);
   }
 });
-
-
-
 
 // $(document).ready(function () {
 //   // Getting references to the name inout and jobcontainer, as well as the table body
@@ -139,3 +136,4 @@ $.get("/api/jobs", function(data) {
 //   //     .then(getJobs);
 //   // }
 // });
+
