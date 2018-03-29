@@ -61,10 +61,11 @@ module.exports = function (sequelize, DataTypes) {
         feedback: {
             type: DataTypes.TEXT,
         }
-    });
-    return Job;
+     
+    })
 
-   Job.sync();
+    return Job;
 };
+
 
 
