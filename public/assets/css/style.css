@@ -90,9 +90,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
    color:#f1f1f1;
    text-align:left;
 
+
 }
 .index-link{
     background-color:#000;
+    /* position: absolute;
+     height: $height-footer;
+       bottom: 0; */
 }
 .index-link ul{
     padding:0px;
@@ -277,3 +281,7 @@ font-weight: bold;
     display: inline-block;
     margin: 20px 0;
 }  */
+
+.custom-footer {
+  margin-top: 150px;
+}
