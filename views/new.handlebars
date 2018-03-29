@@ -1,63 +1,49 @@
 <div class="jumbotron">
+</div>
+<div class="container">
   <div class="row">
-    <div class="container">
-    </div>
-  </div>
-  <div class="row">
-    <div class="container">
+    <div class="col-sm-10 offset-sm-1">
+
+      {{!-- form for application data --}}
+      <form class="newJob">
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <p class="text-right">Company</p>
+          </div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="company">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <p class="text-right">Job Title</p>
+          </div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="title">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <p class="text-right">Location</p>
+          </div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="location">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <p class="text-right">Contact Info</p>
+          </div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="contact">
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success" id="addJob">
+            <a href="/home">Add</a>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
-
-<div class="row">
-  <div class="col-sm-10 offset-sm-1">
-
-    {{!-- form for application data --}}
-
-    <form class="newJob">
-      <div class="form-row">
-        <div class="form-group col-md-2">
-          <p class="text-right">Company</p>
-        </div>
-        <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="company">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group col-md-2">
-          <p class="text-right">Job Title</p>
-        </div>
-        <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="title">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group col-md-2">
-          <p class="text-right">Location</p>
-        </div>
-        <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="location">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group col-md-2">
-          <p class="text-right">Contact Info</p>
-        </div>
-        <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="contact">
-        </div>
-      </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-success" id="addJob">
-          <a href="/">Add</a>
-        </button>
-
-      </div>
-    </form>
-
-  </div>
-</div>
-
