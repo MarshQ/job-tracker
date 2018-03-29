@@ -2,7 +2,7 @@ $("#addJob").on("click", function (event) {
   event.preventDefault();
   var newJob = {
     company:  $("#company").val().trim(),
-    title: $("#title").val().trim(),
+    job_title: $("#title").val().trim(),
     location:  $("#location").val().trim(),
     email: $("#contact").val().trim(),
   };
@@ -13,7 +13,7 @@ $("#addJob").on("click", function (event) {
 
   function submitJob(newJob) {
     $.post("/api/jobs", newJob, function () {
-        // console.log(data);
+        console.log(data);
       });
     };
   $("#company").val("");
