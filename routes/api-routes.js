@@ -60,7 +60,7 @@ module.exports = function (app) {
       feedback: req.body.feedback
       }
     ).then(function() {
-      res.redirect(307, "/home")
+      res.redirect( "/home")
     }).catch(function(err) {
       console.log(err);
       res.json(err);
@@ -69,10 +69,10 @@ module.exports = function (app) {
 
   app.get("/api/jobs", function(req,res) {
     db.Job.findAll({
-    })
-  })
-
-
+    }).then(function (results) {
+      res.json(results);
+    });
+  });
 
   app.delete("/api/jobs/:id", function(req,res) {
     db.Job.destroy({

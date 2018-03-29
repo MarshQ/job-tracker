@@ -2,13 +2,7 @@ module.exports = function (sequelize, DataTypes) {
 
     var Job = sequelize.define("Job", {
 
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isEmail: true
-            }
-        },
+        
         company: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -39,6 +33,13 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isEmail: true
+            }
+        },
         cover_resume: {
             type: DataTypes.BOOLEAN,
             default: false,
@@ -62,6 +63,8 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
     return Job;
+
+   Job.sync();
 };
 
 
